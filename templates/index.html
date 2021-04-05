@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Summarizer</title>
+<style>
+body { 
+  max-width:100%;
+  height:80%;
+  font-family: 'Helvetica';
+  background-image: url('static/images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  font-size: 14px;
+  text-align:center;
+  letter-spacing:1.4px;
+}
+.btn:hover {
+  background-color: #9fbfdf;
+  color: white;
+}
+.btn {
+  font-size: 100%;
+  max-width: 80%;
+  border-radius: 15px;
+  border:2px solid #fff;
+  padding: 10px;
+  width:600px;
+  background: transparent;
+  color:#fff;
+  box-sizing: border-box;
+}
+.topimage {
+  width:20%;
+  height:80%;
+}
+.parent{
+	display: inline-block;
+}
+.child{
+  display: inline-block;
+  vertical-align: top;
+}
+textarea {
+  background: transparent;
+  color: white;
+  resize: none;
+  font-size: 100%;
+  max-width:80%;
+  border-radius: 15px;
+  border:2px solid #fff;
+  padding: 13px;
+  width: 600px;
+  box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+  <div class="login">
+  	<div class = 'parent'>
+  		<div class='child'>
+  			<img class = 'topimage' src = 'static/images/robota.jpg'>
+  			<img class ='topimage' src = 'static/images/robotb.jpg'>
+  			<img class = 'topimage' src = 'static/images/robota.jpg'>
+  			<img class ='topimage' src = 'static/images/robotb.jpg'>
+ 		</div>
+ 	</div>
+	<br>
+	<h2 style='font-size: 150%; color: #9fbfdf'>ABSTRACTIVE TEXT SUMMARIZER</h2>
+	<h2 style='font-size: 100%;'>Unleash the power of deep learning to reduce your text to its very essence!</h2>
+ 	<form action="{{url_for('predict')}}"method="post">
+    <textarea id='your_text' name='your_text' placeholder="Enter Text Here" required="required" rows='4' cols='40'></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary btn-block btn-large">SUMMARIZE</button>
+    </form>
+    <br>
+	{{your_text_header}}
+    <br>
+    {{your_text}}
+    <br>
+    <br>
+    {{summary_text}}
+   	<br>
+   	{{prediction_text}}
+   		
+   	</div>
+</body>
+</html>
