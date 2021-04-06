@@ -3,14 +3,14 @@ Durham College Enterprise Systems Final Project
 
 This project contains the following structure:
 
-Notebook 1: Exploratory Data Analysis and Data Pre-Processing 
+<b>Notebook 1:</b> Exploratory Data Analysis and Data Pre-Processing 
 
-Notebook 2:  Building and Training of Deep Learning Models
+<b>Notebook 2:</b>  Building and Training of Deep Learning Models
 
-Notebook 3:  Loading of Models and Displaying Plots
+<b>Notebook 3:</b>  Loading of Models and Displaying Plots
 
-Notebook 4:  Using the Models to Summarize Input Text
+<b>Notebook 4:</b>  Using the Models to Summarize Input Text
 
-Flask Application Folder:  All of the deployment files for our Summarizer Flask Application 
+<b>Flask Application Folder:</b>  All of the deployment files for our Summarizer Flask Application 
 
-Heroku Files Folder:  Deployment files with the model removed for resource limitations
+<b>Heroku Files Folder:</b>  Deployment files with the model removed for resource limitations
