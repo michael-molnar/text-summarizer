@@ -96,8 +96,8 @@ def clean_text(text):
 
 def decode_sequence(input_seq):
     """
-    Take the processed input sequence and generate the summary using the 
-    econder and decoder models.
+    #Take the processed input sequence and generate the summary using the 
+    #econder and decoder models.
     """
     # Encode the input as state vectors.
     e_out, e_h, e_c = encoder_model.predict(input_seq)
