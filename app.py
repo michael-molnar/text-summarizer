@@ -1,10 +1,10 @@
-import re 
-import numpy as np
+#import re 
+#import numpy as np
 #from tensorflow.keras.preprocessing.sequence import pad_sequences
 #from tensorflow.keras.preprocessing.text import Tokenizer
 #from tensorflow.keras.models import load_model
 from flask import Flask, request, jsonify, render_template
-import pickle
+#import pickle
 
 app = Flask(__name__)
 # Load the encoder and decoder models 
@@ -71,7 +71,7 @@ stopwords = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you',
 
 def clean_text(text):
     """
-    Performs all necessary cleaning operations on text input.
+    #Performs all necessary cleaning operations on text input.
     """
     # Lowercase the text
     new_text = text.lower()
