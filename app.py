@@ -1,22 +1,23 @@
 import re 
 import numpy as np
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.preprocessing.sequence import pad_sequences
+#from tensorflow.keras.preprocessing.text import Tokenizer
+#from tensorflow.keras.models import load_model
 from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
 # Load the encoder and decoder models 
-encoder_model = load_model('encoder_model.h5')
-decoder_model = load_model('decoder_model.h5')
+#encoder_model = load_model('encoder_model.h5')
+#decoder_model = load_model('decoder_model.h5')
 # Import the tokenizers
-text_tokenizer = pickle.load(open('text_tokenizer.pkl', 'rb'))
-summary_tokenizer = pickle.load(open('summary_tokenizer.pkl', 'rb'))
+#text_tokenizer = pickle.load(open('text_tokenizer.pkl', 'rb'))
+#summary_tokenizer = pickle.load(open('summary_tokenizer.pkl', 'rb'))
 
 # Here we will pre-process input text 
 
 # Create the list of contractions and what they will be mapped to
+"""
 contraction_mappings = {"ain't": "is not", "aren't": "are not", "can't": "cannot", "'cause": "because", 
                        "could've": "could have", "couldn't": "could not", "didn't": "did not", 
                        "doesn't": "does not", "don't": "do not", "hadn't": "had not", "hasn't": "has not", 
@@ -142,12 +143,12 @@ MAX_LEN_TEXT = 50
 reverse_target_word_index = summary_tokenizer.index_word 
 reverse_source_word_index = text_tokenizer.index_word 
 target_word_index = summary_tokenizer.word_index
-
+"""
 
 @app.route('/')
 def home():
 	return render_template('index.html')
-
+"""
 @app.route('/predict', methods=['POST'])
 def predict():
 	# Take user input text
@@ -171,6 +172,6 @@ def predict():
 
 	return render_template('index.html', your_text_header = pred_text0, your_text = input_text, 
 		summary_text = pred_text1, prediction_text = summary)
-
+"""
 if __name__ == '__main__':
   app.run(debug=True)
