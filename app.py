@@ -5,6 +5,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.models import load_model
 from flask import Flask, request, jsonify, render_template
 import pickle
+import os
 
 app = Flask(__name__)
 # Load the encoder and decoder models 
@@ -173,4 +174,5 @@ def predict():
 		summary_text = pred_text1, prediction_text = summary)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	port = int(os.environ.get("PORT", 5000))
+  app.run(host-'0.0.0.0', port=port, debug=True)
